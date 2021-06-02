@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B12CE5B25EBC6BB00A091F4 /* QuoteScreenSaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B12CE5A25EBC6BB00A091F4 /* QuoteScreenSaverView.h */; };
-		6B12CE5D25EBC6BB00A091F4 /* QuoteScreenSaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CE5C25EBC6BB00A091F4 /* QuoteScreenSaverView.m */; };
+		6B12CE6725EBC6EB00A091F4 /* QuoteScreenSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CE6625EBC6EB00A091F4 /* QuoteScreenSaverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B12CE5725EBC6BB00A091F4 /* QuoteScreenSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoteScreenSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B12CE5A25EBC6BB00A091F4 /* QuoteScreenSaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuoteScreenSaverView.h; sourceTree = "<group>"; };
-		6B12CE5C25EBC6BB00A091F4 /* QuoteScreenSaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuoteScreenSaverView.m; sourceTree = "<group>"; };
 		6B12CE5E25EBC6BB00A091F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B12CE6625EBC6EB00A091F4 /* QuoteScreenSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteScreenSaverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +46,8 @@
 		6B12CE5925EBC6BB00A091F4 /* QuoteScreenSaver */ = {
 			isa = PBXGroup;
 			children = (
-				6B12CE5A25EBC6BB00A091F4 /* QuoteScreenSaverView.h */,
-				6B12CE5C25EBC6BB00A091F4 /* QuoteScreenSaverView.m */,
 				6B12CE5E25EBC6BB00A091F4 /* Info.plist */,
+				6B12CE6625EBC6EB00A091F4 /* QuoteScreenSaverView.swift */,
 			);
 			path = QuoteScreenSaver;
 			sourceTree = "<group>";
@@ -62,7 +59,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B12CE5B25EBC6BB00A091F4 /* QuoteScreenSaverView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +93,7 @@
 				TargetAttributes = {
 					6B12CE5625EBC6BB00A091F4 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -133,7 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B12CE5D25EBC6BB00A091F4 /* QuoteScreenSaverView.m in Sources */,
+				6B12CE6725EBC6EB00A091F4 /* QuoteScreenSaverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +251,21 @@
 		6B12CE6225EBC6BB00A091F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = H2URF2EZ2M;
 				INFOPLIST_FILE = QuoteScreenSaver/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Glory-Wong.QuoteScreenSaver";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -268,13 +273,20 @@
 		6B12CE6325EBC6BB00A091F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = H2URF2EZ2M;
 				INFOPLIST_FILE = QuoteScreenSaver/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Glory-Wong.QuoteScreenSaver";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
